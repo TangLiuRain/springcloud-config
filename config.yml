@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: service-dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8761:8761/eureka/,http://eureka8760:8760/eureka/
+      
+---
+spring:
+  profiles: test
+  application:
+    name: service-test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8761:8761/eureka/,http://eureka8760:8760/eureka/
